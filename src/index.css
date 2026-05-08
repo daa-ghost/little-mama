@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&family=Italiana&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 36 33% 95%;
+    --foreground: 152 30% 17%;
+    --card: 36 33% 95%;
+    --card-foreground: 152 30% 17%;
+    --popover: 36 33% 95%;
+    --popover-foreground: 152 30% 17%;
+    --primary: 152 30% 17%;
+    --primary-foreground: 36 33% 95%;
+    --secondary: 30 30% 75%;
+    --secondary-foreground: 152 30% 17%;
+    --muted: 30 20% 85%;
+    --muted-foreground: 152 15% 40%;
+    --accent: 20 55% 50%;
+    --accent-foreground: 36 33% 95%;
+    --destructive: 0 60% 35%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 30 20% 80%;
+    --input: 30 20% 85%;
+    --ring: 20 55% 50%;
+    --radius: 0.625rem;
+    --sidebar-background: 36 33% 95%;
+    --sidebar-foreground: 152 30% 17%;
+    --sidebar-primary: 152 30% 17%;
+    --sidebar-primary-foreground: 36 33% 95%;
+    --sidebar-accent: 30 20% 85%;
+    --sidebar-accent-foreground: 152 30% 17%;
+    --sidebar-border: 30 20% 80%;
+    --sidebar-ring: 20 55% 50%;
+
+    --cream: #FAF7F2;
+    --forest: #2A2A2A;
+    --olive: #6B6560;
+    --terracotta: #E53935;
+    --beige: #EFE7DC;
+    --wine: #C62828;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-[#FAF7F2] text-[#2A2A2A] antialiased;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar { width: 5px; height: 5px; }
+  ::-webkit-scrollbar-track { background: #EFE7DC; }
+  ::-webkit-scrollbar-thumb { background: #D4C4B0; border-radius: 99px; }
+  ::-webkit-scrollbar-thumb:hover { background: #E53935; }
+
+  /* Text selection */
+  ::selection { background: rgba(229,57,53,0.18); color: #2A2A2A; }
+
+  /* Focus ring */
+  :focus-visible { outline: 2px solid #E53935; outline-offset: 3px; }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+  .font-cormorant {
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .font-brand {
+    font-family: 'Italiana', serif;
+  }
+  .font-script {
+    font-family: 'Great Vibes', cursive;
+  }
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+  .text-cream { color: #FAF7F2; }
+  .text-charcoal { color: #2A2A2A; }
+  .text-muted { color: #6B6560; }
+  .text-red { color: #E53935; }
+  .text-deep-red { color: #C62828; }
+  .text-beige { color: #EFE7DC; }
+  .text-warm { color: #E0957A; }
+  .text-gold { color: #C7A46C; }
+  .bg-cream { background-color: #FAF7F2; }
+  .bg-charcoal { background-color: #2A2A2A; }
+  .bg-dark { background-color: #1A1A1A; }
+  .bg-red { background-color: #E53935; }
+  .bg-deep-red { background-color: #C62828; }
+  .bg-beige { background-color: #EFE7DC; }
+  .bg-warm { background-color: #E0957A; }
+  .border-beige { border-color: #EFE7DC; }
+  .border-charcoal { border-color: #2A2A2A; }
+  .border-red { border-color: #E53935; }
+
+  /* Grain texture for luxury feel */
+  .grain {
+    position: relative;
+  }
+  .grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+    pointer-events: none;
+    z-index: 1;
+    border-radius: inherit;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+
+  /* Premium section divider */
+  .section-divider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .section-divider::before,
+  .section-divider::after {
+    content: '';
+    height: 1px;
+    width: 3rem;
+    background: linear-gradient(to right, transparent, #C7A46C60);
+  }
+  .section-divider::after {
+    background: linear-gradient(to left, transparent, #C7A46C60);
+  }
+
+  /* Luxury form inputs */
+  .lux-input {
+    @apply w-full px-4 py-3.5 rounded-lg border border-[#EFE7DC]/60 bg-white/80 font-body text-sm text-[#2A2A2A] transition-all duration-300 placeholder:text-[#2A2A2A]/30;
+    backdrop-filter: blur(4px);
+  }
+  .lux-input:focus {
+    outline: none;
+    border-color: #E53935;
+    box-shadow: 0 0 0 3px rgba(229,57,53,0.08);
+  }
+}
