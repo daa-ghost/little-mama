@@ -9,6 +9,7 @@ export default defineConfig({
   plugins: [
     devServer({ entry: "api/boot.ts", exclude: [/^\/(?!api\/).*$/] }),
     react()],
+  base: process.env.VITE_BASE_PATH ?? "/",
   server: {
     port: 3000,
   },
