@@ -74,7 +74,7 @@ export default function Reservation() {
     >
       {/* Background image */}
       <div className="absolute inset-0 opacity-[0.06]">
-        <img src="/images/ambiance.jpg" alt="" aria-hidden="true" className="w-full h-full object-cover" loading="lazy" />
+        <img src={`${import.meta.env.BASE_URL}images/ambiance.jpg`} alt="" aria-hidden="true" className="w-full h-full object-cover" loading="lazy" />
       </div>
 
       {/* Ambient gradient */}

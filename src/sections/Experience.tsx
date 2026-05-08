@@ -68,7 +68,7 @@ export default function Experience() {
       {/* Background image */}
       <div className="absolute inset-0 opacity-[0.07]">
         <img
-          src="/images/ingredients.jpg"
+          src={`${import.meta.env.BASE_URL}images/ingredients.jpg`}
           alt=""
           aria-hidden="true"
           className="w-full h-full object-cover"
@@ -106,7 +106,7 @@ export default function Experience() {
 
           <div className="relative">
             <img
-              src="/images/oven.jpg"
+              src={`${import.meta.env.BASE_URL}images/oven.jpg`}
               alt="Wood-fired oven at 485°C"
               className="rounded-2xl shadow-2xl w-full h-64 lg:h-auto object-cover"
               loading="lazy"

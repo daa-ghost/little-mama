@@ -7,28 +7,28 @@ const locations = [
     address: "128 Boulevard d'Anfa, Casablanca 20000",
     hours: "Mon – Sun: 12:00 PM – 11:00 PM",
     phone: "+212 522 43 21 00",
-    image: "/images/ambiance.jpg",
+    image: `${import.meta.env.BASE_URL}images/ambiance.jpg`,
   },
   {
     city: "Marrakech",
     address: "45 Rue Yves Saint Laurent, Gueliz",
     hours: "Mon – Sun: 12:00 PM – 11:30 PM",
     phone: "+212 524 43 21 00",
-    image: "/images/dinner-table.jpg",
+    image: `${import.meta.env.BASE_URL}images/dinner-table.jpg`,
   },
   {
     city: "Rabat",
     address: "22 Avenue Mohammed VI, Hassan",
     hours: "Mon – Sun: 12:00 PM – 10:30 PM",
     phone: "+212 537 73 21 00",
-    image: "/images/ingredients.jpg",
+    image: `${import.meta.env.BASE_URL}images/ingredients.jpg`,
   },
   {
     city: "Tangier",
     address: "8 Rue de la Plage, Malabata",
     hours: "Mon – Sun: 1:00 PM – 11:00 PM",
     phone: "+212 539 94 21 00",
-    image: "/images/wine.jpg",
+    image: `${import.meta.env.BASE_URL}images/wine.jpg`,
   },
 ];
 

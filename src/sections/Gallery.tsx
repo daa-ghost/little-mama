@@ -2,14 +2,14 @@ import { useEffect, useRef, useState } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 
 const galleryImages = [
-  { src: "/images/ambiance.jpg",    alt: "Restaurant interior",  span: "col-span-2 row-span-2" },
-  { src: "/images/pizza.jpg",       alt: "Pizza Napoletana",     span: "col-span-1 row-span-1" },
-  { src: "/images/dinner-table.jpg",alt: "Romantic dinner",      span: "col-span-1 row-span-2" },
-  { src: "/images/burrata.jpg",     alt: "Burrata Fresca",       span: "col-span-1 row-span-1" },
-  { src: "/images/wine.jpg",        alt: "Italian wine",         span: "col-span-1 row-span-1" },
-  { src: "/images/risotto.jpg",     alt: "Risotto alla Milanese",span: "col-span-1 row-span-1" },
-  { src: "/images/pasta.jpg",       alt: "Fresh pasta",          span: "col-span-1 row-span-1" },
-  { src: "/images/dessert.jpg",     alt: "Tiramisu Classico",    span: "col-span-2 row-span-1" },
+  { src: `${import.meta.env.BASE_URL}images/ambiance.jpg`,    alt: "Restaurant interior",  span: "col-span-2 row-span-2" },
+  { src: `${import.meta.env.BASE_URL}images/pizza.jpg`,       alt: "Pizza Napoletana",     span: "col-span-1 row-span-1" },
+  { src: `${import.meta.env.BASE_URL}images/dinner-table.jpg`,alt: "Romantic dinner",      span: "col-span-1 row-span-2" },
+  { src: `${import.meta.env.BASE_URL}images/burrata.jpg`,     alt: "Burrata Fresca",       span: "col-span-1 row-span-1" },
+  { src: `${import.meta.env.BASE_URL}images/wine.jpg`,        alt: "Italian wine",         span: "col-span-1 row-span-1" },
+  { src: `${import.meta.env.BASE_URL}images/risotto.jpg`,     alt: "Risotto alla Milanese",span: "col-span-1 row-span-1" },
+  { src: `${import.meta.env.BASE_URL}images/pasta.jpg`,       alt: "Fresh pasta",          span: "col-span-1 row-span-1" },
+  { src: `${import.meta.env.BASE_URL}images/dessert.jpg`,     alt: "Tiramisu Classico",    span: "col-span-2 row-span-1" },
 ];
 
 export default function Gallery() {

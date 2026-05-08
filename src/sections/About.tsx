@@ -94,7 +94,7 @@ export default function About() {
               }}
             >
               <img
-                src="/images/chef.jpg"
+                src={`${import.meta.env.BASE_URL}images/chef.jpg`}
                 alt="Chef preparing fresh pasta at Little Mamma"
                 className="w-full h-[400px] lg:h-[580px] object-cover"
                 loading="lazy"
